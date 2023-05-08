@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    flex-wrap: wrap;
+
+
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0,0,0.1); /* смещение по x y, размытость, цвет */
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.paint{
+    width: 40px;
+    height: 45px;
+    margin-left: 5px;
+}
+.navbar .menu {
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.menu .text{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+.menu .text .anim:hover{
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+
+.nav-menu li{
+    display: inline-block;
+}
+.text p{
+    align: left;
+    font-size: 20px;
+
+}
+
+.nav-menu li a {
+    display: inline-block;
+    color: #000;
+    font-size: 18px;
+    opacity: 0.77;
+    text-decoration: none;
+    padding: 7px;
+    transition: all .08s ease-in-out;
+}
+
+#nav-menu-active{
+    opacity: 1;
+    font-size: 19px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.nav-menu li a:hover{
+    opacity: 1;
+    font-size: 19px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.button-lang{
+    border: 4px solid #E0E0E0;
+    background-color: #E0E0E0;
+    transition: all .1s ease-out;
+
+}
+
+.button-lang:hover{
+    transform: scale(1.04);
+    font-weight:  bold;
+
+}

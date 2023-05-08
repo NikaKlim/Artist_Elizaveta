@@ -1,0 +1,95 @@
+.page2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-wrap: wrap;
+
+}
+
+.page2-block{
+    background-color:  #E0E0E0;
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.page2-work{
+    height: 90%;
+    width: 50%;
+    background: url(../img/work-painting-ex.jpg);
+    background-color: black;
+    cursor: pointer;
+}
+
+
+.page2-text{
+    padding-left: 5%;
+
+}
+
+.page2-text h3{
+    opacity: 0.6;
+}
+
+.page2-text p{
+    margin-right: 15px;
+}
+.page2-button{
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 20px;
+}
+.page2-button:hover{
+    padding: 15px 45px;
+    font-size: 23px;
+    font-weight: 900;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.page2-button:active {
+  background-color: #E0E0E0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.work-examples-1{
+    background: url(../img/work-graphical.jpg);
+}
+.work-examples-2{
+    background: url(../img/work-pencil.jpg);
+}
+.work-examples-3{
+    background: url(../img/work-photo.jpg);
+}
+.work-examples-4{
+    background: url(../img/work-painting.jpg);
+}
+
+.page2-work {
+  /* Другие CSS-правила... */
+  transition: background-image 0.5s ease-in-out;
+}
+
+
+.end{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0,0,0.1); /* смещение по x y, размытость, цвет */
+    background-color: #E0E0E0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: no-wrap;
+}

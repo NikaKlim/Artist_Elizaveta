@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fa.css')}}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% block title %}{% endblock %}
+</head>
+<body>
+
+<div class="header">
+        <div class="author-name">
+            <p>Elizaveta Gapanovich</p>
+            <h3> | </h3>
+            <p>Artist</p>
+            <img class="logo" src="{{ url_for('static', filename='img/paint2.png')}}" alt="Logo">
+        </div>
+        <ul class="header-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/biography">Biography</a></li>
+            <li><a href="/order">Order a job</a></li>
+            <li><a href="/order">Log In</a></li>
+        </ul>
+
+        <select class="button-lang">
+            <option value="pl">PL</option>
+            <option value="en" selected>EN</option>
+            <option value="ru">RU</option>
+        </select>
+</div>
+
+
+<div class="nic">
+
+</div>
+
+{% block body %}{% endblock %}
+
+
+
+
+<div class="footer">
+    <div class="end-1">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+    <p>@Elizaveta Gapanovich - Professional Artist</p>
+    <p>elizaveta.gapanovich@gmail.com</p>
+</div>
+
+</body>
+</html>
