@@ -1,7 +1,7 @@
 from flask import Flask, render_template, flash, request, url_for, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import check_password_hash, generate_password_hash
-from flask_login import login_user, login_required, logout_user
+from flask_login import login_user, login_required, logout_user, LoginManager
 
 app = Flask(__name__)
 
@@ -10,16 +10,36 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'rbgvfedcsxdcfvbfgnhb'
 db = SQLAlchemy(app)
 
+login_manager = LoginManager(app)
+
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(10), nullable=False)
-    password = db.Column(db.String(10), nullable=False)
+    password = db.Column(db.String(4), nullable=False)
+    authenticated = db.Column(db.Boolean, default=False)
+
+    def is_active(self):
+        return True
+
+    def get_id(self):
+        """Return the email address to satisfy Flask-Login's requirements."""
+        return self.login
+
+    def is_authenticated(self):
+        """Return True if the user is authenticated."""
+        return True
+
+    def is_anonymous(self):
+        """False, as anonymous users aren't supported."""
+        return False
 
     def __repr__(self):
-
         return f'User: {(self.login)} - {(self.password)}'
 
+
 user = User(login='Artist', password='1122')
+
 
 @app.route('/')
 def index():
@@ -27,6 +47,7 @@ def index():
 
 
 @app.route('/portfolio')
+@login_required
 def portfolio():
     print(url_for('portfolio'))
     return render_template("portfolio.html")
@@ -47,14 +68,14 @@ def order():
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
+        print(request.form)
         login = request.form.get('login')
         password = request.form.get('password')
         user = User(login=login, password=password)
+        print(user.login, user.password)
         try:
             db.session.add(user)
             db.session.commit()
-            print(url_for('register'))
-            flash(f'Login or password is not correct - {login} - {password}: {user}')
             return redirect('/')
         except:
             print("Something wrong")
@@ -63,23 +84,26 @@ def register():
     else:
         return render_template('register.html')
 
+
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     login = request.form.get('login')
     password = request.form.get('password')
-    if login and password:
-        user = User.query.filter_by(login=login).first()
-        flash(f'Login or password is not correct - {user}')
-        if user and check_password_hash(user.password, password):
-            login_user(user)
-
-            next_page = request.args.get('next')
-            return redirect(next_page)
-        else:
-            flash(f'Login or password is not correct - {login} - {password}: {user}')
-    else:
-        flash('Please enter login and password')
+    if login == user.login and password == user.password:
+        user.authenticated=True
+        db.session.add(user)
+        db.session.commit()
+        login_user(user, remember=True)
+        print(user)
+        print('Login successfully.')
+        return render_template('index.html')
     return render_template('login.html')
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
