@@ -16,7 +16,7 @@ login_manager = LoginManager(app)
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(10), nullable=False)
-    password = db.Column(db.String(4), nullable=False)
+    password = db.Column(db.String(128), nullable=False) # Изменено на 128 символов, т.к. используется хэш
     authenticated = db.Column(db.Boolean, default=False)
 
     def is_active(self):
@@ -36,9 +36,6 @@ class User(db.Model):
 
     def __repr__(self):
         return f'User: {(self.login)} - {(self.password)}'
-
-
-user = User(login='Artist', password='1122')
 
 
 @app.route('/')
@@ -68,35 +65,31 @@ def order():
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        print(request.form)
         login = request.form.get('login')
-        password = request.form.get('password')
+        password = generate_password_hash(request.form.get('password'))
         user = User(login=login, password=password)
-        print(user.login, user.password)
-        try:
-            db.session.add(user)
-            db.session.commit()
-            return redirect('/')
-        except:
-            print("Something wrong")
-            return render_template('register.html')
-
-    else:
-        return render_template('register.html')
+        db.session.add(user)
+        db.session.commit()
+        flash('Registered successfully.')
+        return redirect(url_for('login'))
+    return render_template('register.html')
 
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
-    login = request.form.get('login')
-    password = request.form.get('password')
-    if login == user.login and password == user.password:
-        user.authenticated=True
-        db.session.add(user)
-        db.session.commit()
-        login_user(user, remember=True)
+    if request.method == 'POST':
+        login = request.form.get('login')
+        password = request.form.get('password')
+        user = User.query.filter_by(login=login).first()
         print(user)
-        print('Login successfully.')
-        return render_template('index.html')
+        if user and check_password_hash(user.password, password):
+            user.authenticated = True
+            db.session.commit()
+            login_user(user)
+            flash('Logged in successfully.')
+            return redirect(url_for('index'))
+        else:
+            flash('Invalid login or password.')
     return render_template('login.html')
 
 

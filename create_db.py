@@ -1,4 +1,4 @@
-from main import app, db, user
+from main import app, db
 
 
 with app.app_context():
