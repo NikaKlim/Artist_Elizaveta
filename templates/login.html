@@ -11,4 +11,30 @@
 {% block body %}
 
 <p>Log In</p>
+{%with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+
+<form action="" method="post">
+    <table>
+        <tr>
+          <td>Login</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+          <td>Password </td>
+            <td><input type="password" name="password"></td>
+        <tr>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+
 {% endblock %}
