@@ -13,10 +13,11 @@
 {% for el in data %}
 <h1> {{ el.title}}</h1>
 <p> {{ el.text}}</p>
-{%  endfor %}
+<p>{{ el.image }}</p>
+<img src="{{ el.image }}">
+{% endfor %}
 
 
-{{ data }}
 
 
 {% endblock %}

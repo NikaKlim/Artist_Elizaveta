@@ -18,13 +18,6 @@
     align-items: center;
 
 }
-.page2-work{
-    height: 90%;
-    width: 50%;
-    background: url(../img/work-painting-ex.jpg);
-    background-color: black;
-    cursor: pointer;
-}
 
 
 .page2-text{
@@ -61,6 +54,14 @@
   transform: translateY(4px);
 }
 
+.page2-work{
+    height: 90%;
+    width: 50%;
+    background: url(../img/work-painting-ex.jpg);
+    background-color: black;
+    cursor: pointer;
+}
+
 
 .work-examples-1{
     background: url(../img/work-graphical.jpg);
@@ -79,6 +80,9 @@
   /* Другие CSS-правила... */
   transition: background-image 0.5s ease-in-out;
 }
+
+
+
 
 
 .end{

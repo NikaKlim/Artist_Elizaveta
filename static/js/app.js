@@ -1,4 +1,4 @@
-const elem = document.querySelectorAll('.page2-work');
+const elem = document.querySelectorAll('.portfolio');
 let currentClassIndex = 1;
 
 for(let i = 0; i < elem.length; i++){

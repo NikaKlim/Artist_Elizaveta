@@ -6,13 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="112ba39a-f15b-4f7c-9c87-dc31ebf8739a" name="Changes" comment="Authorization work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/log.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/css/page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Lizaqaz/Liza/css/page2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/liza-profile-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/liza-profile-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/liza-profile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/liza-profile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-graphical.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-graphical.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-painting.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-painting.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-pancil-ex.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-pancil-ex.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-photo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-photo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lizaqaz/Liza/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/js/portfoli.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/js/scrol.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +72,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\PycharmProjects\Liza\static" />
+      <recent name="C:\Users\Alex\PycharmProjects\Liza\static\img" />
       <recent name="C:\Users\Alex\PycharmProjects\Liza\sweater" />
       <recent name="C:\Users\Alex\PycharmProjects\Liza\static\css" />
-      <recent name="C:\Users\Alex\PycharmProjects\Liza\static\img" />
       <recent name="C:\Users\Alex\PycharmProjects\Liza" />
-      <recent name="C:\Users\Alex\PycharmProjects\Lizaqaz" />
     </key>
   </component>
   <component name="RunManager">
@@ -130,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683668474318</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Authorization work">
+      <created>1683723028253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683723028253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
