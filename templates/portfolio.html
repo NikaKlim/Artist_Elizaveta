@@ -10,4 +10,13 @@
 
 {% block body %}
 <p>Portfolio</p>
+{% for el in data %}
+<h1> {{ el.title}}</h1>
+<p> {{ el.text}}</p>
+{%  endfor %}
+
+
+{{ data }}
+
+
 {% endblock %}
