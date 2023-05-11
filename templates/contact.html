@@ -3,12 +3,42 @@
 
 
 {% block title %}
-<title>Contact</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css')}}">
+
+<title>{{ data.name }} {{ data.menu_contact }}</title>
 {% endblock %}
 
 
 
 {% block body %}
 
-<p>Contact</p>
+
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">{{ data.first_name }}</label>
+    <input type="text" id="fname" name="firstname" placeholder="{{ data.your_name }}">
+
+    <label for="lname">{{ data.last_name }}</label>
+    <input type="text" id="lname" name="lastname" placeholder="{{ data.your_last_name }}">
+
+    <label for="country">{{ data.country }}</label>
+    <select class="button_contact" id="country" name="country">
+      <option value="poland">{{ data.poland }}</option>
+      <option value="ukraine">{{ data.ukraine }}</option>
+      <option value="belorusia">{{ data.belorusia }}</option>
+      <option value="russia">{{ data.russia }}</option>
+      <option value="another">{{ data.another }}</option>
+    </select>
+
+    <label for="subject">{{ data.subject }}</label>
+    <textarea id="subject" name="subject" placeholder="{{ data.write_something }}" style="height:200px"></textarea>
+
+    <input type="submit" value="{{ data.submit }}">
+
+  </form>
+</div>
+
+
+
 {% endblock %}

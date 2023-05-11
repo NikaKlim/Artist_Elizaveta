@@ -3,19 +3,31 @@
 
 
 {% block title %}
-<title>Online shop</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css')}}">
+<title>{{ data.name }} {{ data.menu_portfolio }}</title>
 {% endblock %}
 
 
 
 {% block body %}
-<p>Portfolio</p>
-{% for el in data %}
-<h1> {{ el.title}}</h1>
-<p> {{ el.text}}</p>
-<p>{{ el.image }}</p>
-<img src="{{ el.image }}">
-{% endfor %}
+
+
+
+<h1 class="portfolio-title">{{ data.name }} - {{ data.my_portfolio }}</h1>
+<div class="container-portfolio">
+    {% for el in paints %}
+    <div class="portfolio-job">
+        <h2> {{ el.title}}</h2>
+        <h4> {{ el.text}}</h4>
+        <img src="{{ el.image }}">
+    </div>
+
+    {% endfor %}
+
+</div>
+<div class="container-portfolio">
+    <a class="add-new-work" href="/add_new">{{ data.add_new_work }}</a>
+</div>
 
 
 

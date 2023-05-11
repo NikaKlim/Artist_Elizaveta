@@ -6,20 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="112ba39a-f15b-4f7c-9c87-dc31ebf8739a" name="Changes" comment="Authorization work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/css/page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Lizaqaz/Liza/css/page2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/liza-profile-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/liza-profile-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/liza-profile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/liza-profile.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-graphical.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-graphical.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-painting.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-painting.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-pancil-ex.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-pancil-ex.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-photo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/work-photo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lizaqaz/Liza/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/js/portfoli.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/js/scrol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/css/page-1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/css/page2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/css/portfolio.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/css/taskbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/port-paiting.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-graphical-ex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-painting-ex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-pancil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-pencil-ex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-pencil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/img/work-photo-ex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lizaqaz/Liza/portfolio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/painting.db" beforeDir="false" afterPath="$PROJECT_DIR$/instance/painting.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/biography.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/biography.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio.html" afterDir="false" />
     </list>
@@ -31,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -56,7 +62,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PW0QbqtrP88eFMm7sl7oS9GMPQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,11 +80,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\PycharmProjects\Liza\languages\lang" />
       <recent name="C:\Users\Alex\PycharmProjects\Liza\static" />
       <recent name="C:\Users\Alex\PycharmProjects\Liza\static\img" />
       <recent name="C:\Users\Alex\PycharmProjects\Liza\sweater" />
       <recent name="C:\Users\Alex\PycharmProjects\Liza\static\css" />
-      <recent name="C:\Users\Alex\PycharmProjects\Liza" />
     </key>
   </component>
   <component name="RunManager">
@@ -146,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683723028253</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Authorization work">
+      <created>1683733444830</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683733444830</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

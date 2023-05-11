@@ -14,24 +14,26 @@
 
 <div class="header">
         <div class="author-name">
-            <p>Elizaveta Gapanovich</p>
+            <p>{{ data.name }}</p>
             <h3> | </h3>
-            <p>Artist</p>
+            <p>{{ data.profession }}</p>
             <img class="logo" src="{{ url_for('static', filename='img/paint2.png')}}" alt="Logo">
         </div>
         <ul class="header-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/biography">Biography</a></li>
-            <li><a href="/order">Order</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/" class="nav-link">{{ data.menu_home }}</a></li>
+            <li><a href="/portfolio" class="nav-link">{{ data.menu_portfolio }}</a></li>
+            <li><a href="/contact" class="nav-link">{{ data.menu_contact }}</a></li>
         </ul>
 
-        <select class="button-lang">
-            <option value="pl">PL</option>
-            <option value="en" selected>EN</option>
-            <option value="ru">RU</option>
-        </select>
+
+        <form action="/language" method="post">
+            <select name="lang">
+                <option value="pl">PL</option>
+                <option value="en" selected>EN</option>
+                <option value="ru">RU</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
 </div>
 
 
@@ -52,5 +54,7 @@
     <p>elizaveta.gapanovich@gmail.com</p>
 </div>
 
+<script src="../static/js/lang.js"></script>
+<script src="../static/js/menu-active.js"></script>
 </body>
 </html>
